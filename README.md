@@ -5,6 +5,16 @@
 AutoEncoder.ipynb
 ```
 
+---
+
+## Execution Environment
+
+All experiments were executed on **Google Colab with GPU**  
+
+The notebooks are fully reproducible and automatically download the required datasets.
+
+---
+
 ## Inspiration
 
 Alzheimer’s disease is a progressive neurological disorder that profoundly impacts patients, families, and healthcare systems. One of the major challenges lies in **early detection and reliable assessment of disease severity**, especially when visual differences between MRI scans can be subtle and difficult to interpret, even for trained clinicians.
@@ -16,6 +26,8 @@ We were inspired by a simple but powerful question :
 Rather than relying on a single modeling approach, we wanted to explore **multiple perspectives** :
 
 *Classical supervised learning, transfer learning with state-of-the-art architectures, and finally a self-supervised anomaly detection approach that does not require labels at all.*
+
+---
 
 ## What it does
 
@@ -40,6 +52,8 @@ Our project analyzes brain MRI images to study Alzheimer’s disease through **t
 - Visualization of anomaly maps highlighting regions that diverge from the learned healthy pattern
 
 Together, these approaches allow both **quantitative evaluation (classification performance)** and **qualitative interpretation (visual anomaly maps)** of disease progression.
+
+---
 
 ## How we built it
 
@@ -85,7 +99,7 @@ To simulate real-world deployment, we tested all trained models on **previously 
 
 This step revealed a critical insight :
 
-_Models with excellent validation accuracy can collapse when faced with distribution shifts._
+*Models with excellent validation accuracy can collapse when faced with distribution shifts.*
 
 This motivated the exploration of a fundamentally different paradigm.
 
@@ -117,6 +131,47 @@ This enabled :
 
 - Clear visualization of progressive structural divergence across Alzheimer’s stages
 
+---
+
+## Repository Structure
+
+```
+CNNs-for-Alzheimer-s-Detection/
+
+├── AutoEncoder.ipynb
+│   # Self-supervised autoencoder for anomaly detection trained on Non-Demented MRI scans
+
+├── Kaggle_MRI_Alzheimers_Djebril_Redha_vf.ipynb
+│   # Main notebook: supervised CNNs, transfer learning (EfficientNet, ResNet),
+│   # production-like testing, and cross-dataset evaluation
+
+├── OAS1_0003_MR1_mpr-3_105.jpg
+├── OAS1_0004_MR1_mpr-2_116.jpg
+├── OAS1_0028_MR1_mpr-2_105.jpg
+├── OAS1_0308_MR1_mpr-3_123.jpg
+│   # Sample brain MRI images used for qualitative testing and visualization
+
+├── README.md
+│   # Project documentation (motivation, methods, results, limitations)
+
+├── best_model.keras
+│   # Best-performing supervised CNN model (baseline / tuned)
+
+├── best_model_v2.keras
+│   # Fine-tuned CNN model trained with adaptive learning rate strategy
+
+├── train.parquet
+│   # Preprocessed training dataset metadata and labels
+
+├── test.parquet
+│   # Preprocessed test dataset metadata and labels
+
+└── .gitignore
+    # Files and folders excluded from version control
+```
+
+---
+
 ## Challenges we ran into
 
 - **Dataset heterogeneity** : MRI scans from different sources vary in contrast, resolution, and acquisition protocols.
@@ -128,6 +183,8 @@ This enabled :
 - **Interpretability** : Classification alone does not explain why a prediction is made.
 
 - **Compute constraints** : Efficient memory handling was required to avoid GPU out-of-memory errors.
+
+---
 
 ## Accomplishments that we are proud of
 
@@ -141,6 +198,8 @@ This enabled :
 
 - Combined **quantitative** metrics and **qualitative** visual explanations in a single project.
 
+---
+
 ## What we learned
 
 - High accuracy does not necessarily imply robustness or clinical usefulness.
@@ -153,6 +212,8 @@ This enabled :
 
 - Visualization is crucial for trust and interpretability in medical AI.
 
+---
+
 ## What is next
 
 If we had more time, we would explore :
@@ -162,3 +223,21 @@ If we had more time, we would explore :
 - Hybrid approaches combining **anomaly scores + supervised classifiers**
 
 - Region-based severity analysis using anatomical brain masks
+
+---
+
+## Disclaimer
+
+This project was developed as part of the **AI 4 Alzheimer’s Hackathon** and is intended solely for **research, educational, and exploratory purposes**.
+
+The models and visualizations presented in this repository are **not medical devices** and are **not intended for clinical diagnosis, treatment, or medical decision-making**.  
+The highlighted anomaly regions and predictions do **not correspond to exact medical lesions**, but rather to areas where brain structures diverge from learned patterns in the data.
+
+Any results should be interpreted with caution and **must not replace professional medical evaluation** by qualified healthcare practitioners.
+
+---
+
+## 👤 Authors
+
+This project was developed by **Djebril Laouedj** and **Redha Ibbou**,  
+final-year students in **Big Data & Artificial Intelligence** at **ECE Paris**.
