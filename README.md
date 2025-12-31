@@ -9,9 +9,7 @@ AutoEncoder.ipynb
 
 ## Execution Environment
 
-All experiments were executed on **Google Colab with GPU**  
-
-The notebooks are fully reproducible and automatically download the required datasets.
+All experiments were executed on **Google Colab with GPU**
 
 ---
 
