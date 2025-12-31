@@ -1,0 +1,54 @@
+# Python
+
+__pycache__/
+*.py[cod]
+*.so
+
+# Jupyter / Colab
+
+.ipynb_checkpoints/
+*.log
+
+# Virtual environments
+
+venv/
+.env/
+.envrc/
+
+# TensorFlow / Keras models
+
+*.h5
+*.keras
+saved_model/
+checkpoints/
+logs/
+tensorboard/
+
+# Large datasets & caches
+
+data/
+dataset/
+datasets/
+*.csv
+*.parquet
+*.zip
+*.tar
+*.tar.gz
+
+# Kaggle / Colab cache
+
+.kaggle/
+kaggle.json
+/content/
+cache/
+
+# OS files
+
+.DS_Store
+Thumbs.db
+
+# Temporary files
+
+*.tmp
+*.bak
+*.swp
