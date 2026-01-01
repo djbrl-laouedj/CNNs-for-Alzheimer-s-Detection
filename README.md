@@ -152,6 +152,9 @@ CNNs-for-Alzheimer-s-Detection/
 ├── README.md
 │   # Project documentation (motivation, methods, results, limitations)
 
+├── README_FR.md
+│   # French Project documentation (motivation, methods, results, limitations)
+
 ├── best_model.keras
 │   # Best-performing supervised CNN model (baseline / tuned)
 
