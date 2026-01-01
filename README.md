@@ -237,5 +237,5 @@ Any results should be interpreted with caution and **must not replace profession
 
 ## 👤 Authors
 
-This project was developed by **Djebril Laouedj** and **Redha Ibbou**,  
+This project was developed by **Djebril Laouedj** and **Redha Ibbou** [@KYX6](https://github.com/KYX6), 
 final-year students in **Big Data & Artificial Intelligence** at **ECE Paris**.
